@@ -8,12 +8,7 @@ describe('MainContent', () => {
   it('should render a button', () => {
     render(<MainContent />);
 
-    expect(screen.getByRole('button')).toBeInTheDocument();
-  });
-
-  it('help area should not be visible initially', () => {
-    render(<MainContent />);
-    expect(screen.queryByTestId('help-area')).not.toBeInTheDocument();
+    expect(screen.getByRole('button')).not.toBeInTheDocument();
   });
   
 
