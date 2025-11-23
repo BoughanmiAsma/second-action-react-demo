@@ -47,4 +47,11 @@ jobs:
         run: echo "Déploiement simulé terminé ..."
       - name: Nettoyage
         run: echo "Nettoyage de l’espace de travail du runner..."
+  notify:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: afficher un message de notification
+        uses: echo "Deployement terminé"
         
