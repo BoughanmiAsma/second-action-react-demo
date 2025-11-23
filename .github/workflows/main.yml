@@ -53,5 +53,5 @@ jobs:
 
     steps:
       - name: afficher un message de notification
-        uses: echo "Deployement terminé"
+        run: echo "Deployement terminé"
         
