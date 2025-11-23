@@ -15,7 +15,6 @@ function MainContent() {
       {helpVisible && <HelpArea />}
     </main>
   );
-
 }
 
 export default MainContent;
