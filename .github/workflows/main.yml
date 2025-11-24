@@ -8,6 +8,8 @@ on:
   pull_request:
     types: [opened, reopened, edited]
     branches: [main]
+  issues:
+      types: [opened, closed]
 
   workflow_dispatch:
 
@@ -52,6 +54,8 @@ jobs:
         run: echo "Déploiement simulé terminé ..."
       - name: Nettoyage
         run: echo "Nettoyage de l’espace de travail du runner..."
+      - name: Journaliser l’événement issue
+        run: echo "Une issue a été ${{ github.event.action }}"
   notify:
     needs: deploy
     runs-on: ubuntu-latest
