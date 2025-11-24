@@ -6,7 +6,7 @@ on:
       - main
       - dev-*      # toute branche commençant par “dev-”
       - feat/**    # toute branche commençant par “feat/” (peut contenir des sous-dossiers)
-        paths-ignore:
+    paths-ignore:
       - .github/workflows/**
       
   pull_request:
